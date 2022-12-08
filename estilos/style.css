@@ -7,7 +7,7 @@
 
 *{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    padding: 0px;
+    padding: auto;
     margin: 0px;
     box-sizing: border-box;
     
@@ -30,15 +30,15 @@ section#login{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    
     overflow: hidden; /*Deixa a imagem arredonda de acordo com o border radius*/
-
     background-color: white;
     width: 250px;
-    height: 500px;
-    border-radius: 20px;
+    height: 520px;
+    border-radius: 16px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.450);
-
+    
+    transform: translate(-50%, -50%);
     transition: width 0.25s, height 0.25s; /*"animação" de trnasição quando muda tamanho das telas*/
     transition-timing-function: ease;
 }
@@ -58,10 +58,106 @@ div#formulario{
 }
 
 div#formulario > h1{
-    padding-left: 20px;
+    margin-bottom: 5px;
+
+    text-align: center;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.250);
 }
 
 div#formulario > p{
-    padding-left: 20px;
+    padding-bottom: 20px;
 }
+
+div.campo{
+    background-color: var(--lilas);
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    margin: 5px 0px;
+}
+
+div.campo > label{
+    display: none;
+}
+
+div.campo > span{
+    display: block;
+    color: white;
+    font-weight: 300;
+    font-size: 2em;
+    width: 40px;
+    padding: 5px;
+}
+
+div.campo > input{
+    background-color: #ffffff;
+    color: black;
+    font-size: 1em;
+    width: calc(100% - 44px);
+    height: 100%;
+    border: 2px solid var(--lilas);
+    border-radius: 8px;
+    padding: 4px;
+    margin-left: 44px;
+    
+    transform: translateY(-42px);
+}
+
+form > input[type=submit]{
+    display: block;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    color: white;
+    background-color: var(--ciano);
+    border: none;
+    border-radius: 10px;
+}
+
+form > input[type=submit]:hover{
+    font-weight: bold;
+    background-color: #327471;
+    transition: 0.25s;
+}
+
+form > a.botao{
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    background-color: white;
+    color: var(--ciano);
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid var(--ciano);
+    text-decoration: none;
+    margin-top: 7px;
+    padding-top: 5px;
+    
+}
+
+form > a.botao:hover{
+    font-weight: bold;
+    transition: 0.25s;
+    color: white;
+    background-color: var(--ciano);
+    cursor: default;
+}
+
+span#iconmail{
+    font-size: 1.25em;
+    margin-left: 2px;
+}
+
+::placeholder {
+    color: var(--lilas);
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: var(--lilas);
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+   color: var(--lilas);
+  }
